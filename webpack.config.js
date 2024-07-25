@@ -1,0 +1,13 @@
+const path = require('path');
+module.exports = {
+    entry: './src/index.js',
+    mode: "development",
+    output: {
+        filename: 'app.js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    devServer: {
+        static: path.join(__dirname, 'public'),
+        port: 9000
+    }
+}
